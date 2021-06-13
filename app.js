@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path')
-const port = 8081;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 const app = express();
 
 //app.use(express.static('./dist'))
